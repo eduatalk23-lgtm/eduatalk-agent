@@ -32,13 +32,30 @@ API 키는 [Anthropic Console](https://console.anthropic.com/)에서 발급받�
 
 ## 사용법
 
-### 기본 실행
+### 대화형 모드 (REPL)
 
 ```bash
-# 데모 모드 (기본 프롬프트로 실행)
+# 대화형 모드 시작 (기본)
 pnpm start
 
-# 사용자 요청 실행
+# 또는 명시적으로
+pnpm start -i
+pnpm start --interactive
+```
+
+대화형 모드에서 사용 가능한 명령어:
+
+| 명령어 | 설명 |
+|--------|------|
+| `/help`, `/h` | 도움말 표시 |
+| `/clear`, `/c` | 세션 초기화 (새 대화 시작) |
+| `/stats`, `/s` | 현재 세션 통계 (비용, 시간) |
+| `/exit`, `/q` | 에이전트 종료 |
+
+### 단일 실행 모드
+
+```bash
+# 한 번 실행 후 종료
 pnpm start "요청 내용"
 ```
 
